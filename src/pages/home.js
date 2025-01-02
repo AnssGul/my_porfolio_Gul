@@ -6,89 +6,77 @@ const Home = () => {
 
     return (
         <div style={{
-            padding: '20px',
+            display: 'flex',
+            flexDirection: 'row',
+            height: '100vh',
             fontFamily: 'Arial, sans-serif',
-            maxWidth: '900px',
-            margin: '0 auto',
-            textAlign: 'center',
-            lineHeight: '1.6',
-            color: '#2c3e50',
+            flexWrap: 'wrap',
         }}>
-            {/* Profile Section */}
-            <img
-                src="/profile.jpg"
-                alt="Muhammad Anus Gul"
-                style={{
-                    width: '300px',
-                    borderRadius: '50%',
-                    marginBottom: '20px',
-                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-                }}
-            />
-            <h1
-                onClick={() => navigate('/bio')}
-                style={{
-                    fontSize: '2.8em',
-                    color: '#0078D7',
-                    cursor: 'pointer',
-                    marginBottom: '10px',
-                }}
-            >
-                Hi, I'm Muhammad Anus Gul
-            </h1>
-            <p style={{ fontSize: '1.2em', marginBottom: '20px' }}>
-                A seasoned <strong>Flutter Developer</strong> with extensive expertise in crafting innovative, scalable, and user-friendly mobile applications. Proficient in <strong>BLoC</strong>, <strong>GetX</strong>, and other state management approaches. Passionate about clean code, performance optimization, and delivering seamless user experiences.
-            </p>
-            {/* CV Section */}
-            <section style={{
-                backgroundColor: '#f9f9f9',
+            {/* Left Section */}
+            <div style={{
+                flex: 1,
+                backgroundColor: '#FF5722',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                color: '#FFFFFF',
                 padding: '20px',
-                borderRadius: '8px',
-                margin: '20px 0',
-                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                minWidth: '300px',
             }}>
-                <h2 style={{
-                    fontSize: '1.8em',
-                    marginBottom: '20px',
-                    color: '#333',
-                    borderBottom: '2px solid #0078D7',
-                    display: 'inline-block',
-                    paddingBottom: '5px',
-                }}>
-                    My CV
-                </h2>
-                <p style={{ fontSize: '1.2em', marginBottom: '20px' }}>
-                    View or download my CV for more details about my experience and skills.
+                <img
+                    src="/profile.jpg"
+                    alt="Muhammad Anus Gul"
+                    style={{
+                        width: '200px',
+                        height: '200px',
+                        borderRadius: '50%',
+                        marginBottom: '20px',
+                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+                    }}
+                />
+                <h1 style={{ fontSize: '2em', fontWeight: 'bold', marginBottom: '10px' }}>
+                    Muhammad Anus Gul
+                </h1>
+                <h2 style={{ fontSize: '1.2em', fontWeight: 'lighter' }}>Flutter Developer</h2>
+            </div>
+
+            {/* Right Section */}
+            <div style={{
+                flex: 2,
+                backgroundColor: '#1A1A1A',
+                color: '#FFFFFF',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                padding: '40px',
+                minWidth: '300px',
+            }}>
+                <h1 style={{ fontSize: '2.5em', fontWeight: 'bold', marginBottom: '20px' }}>
+                    Hi, I'm Muhammad Anus Gul
+                </h1>
+                <p style={{ fontSize: '1.2em', lineHeight: '1.8', marginBottom: '40px' }}>
+                    A seasoned <strong>Flutter Developer</strong> with expertise in crafting scalable, user-friendly mobile applications. Proficient in <strong>BLoC</strong>, <strong>GetX</strong>, and performance optimization.
                 </p>
                 <a
                     href="/Anus_Gul_CV.pdf"
                     download="Anus_Gul_CV.pdf"
                     style={{
                         display: 'inline-block',
-                        padding: '10px 20px',
-                        backgroundColor: '#0078D7',
-                        color: '#fff',
+                        padding: '15px 30px',
+                        backgroundColor: '#FF5722',
+                        color: '#FFFFFF',
                         textDecoration: 'none',
                         borderRadius: '5px',
-                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-                        fontSize: '1.1em',
+                        fontSize: '1.2em',
+                        fontWeight: 'bold',
+                        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
                     }}
                 >
                     Download CV
                 </a>
-                <div style={{ marginTop: '20px', textAlign: 'left' }}>
-                    <iframe
-                        src="/Anus_Gul_CV.pdf"
-                        style={{
-                            width: '100%',
-                            height: '500px',
-                            border: '1px solid #ddd',
-                            borderRadius: '8px',
-                        }}
-                        title="Anus Gul CV"
-                    />
-                </div>
-            </section>
+            </div>
+
             {/* Skills Highlights Section */}
             <section style={{
                 backgroundColor: '#f9f9f9',
@@ -96,6 +84,7 @@ const Home = () => {
                 borderRadius: '8px',
                 margin: '20px 0',
                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                width: '100%',
             }}>
                 <h2 style={{
                     fontSize: '1.8em',
@@ -112,6 +101,7 @@ const Home = () => {
                     margin: '0 auto',
                     maxWidth: '700px',
                     listStyleType: 'square',
+                    alignItems: "start",
                     fontSize: '1.1em',
                     lineHeight: '1.8',
                 }}>
@@ -131,6 +121,7 @@ const Home = () => {
                 padding: '20px',
                 borderRadius: '8px',
                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                width: '100%', // Ensure it takes full width on smaller screens
             }}>
                 <h2 style={{
                     fontSize: '1.8em',
@@ -194,6 +185,7 @@ const Home = () => {
                 borderRadius: '8px',
                 margin: '20px 0',
                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                width: '100%', // Ensure it takes full width on smaller screens
             }}>
                 <h2 style={{
                     fontSize: '1.8em',
@@ -213,11 +205,11 @@ const Home = () => {
                     maxWidth: '600px',
                     fontSize: '1.1em',
                 }}>
-                    <li>Email: <a href="mailto:muhammadanss.0554@gmail.com" style={{ color: '#0078D7' }}>muhammadanss.0554@gmail.com</a></li>
-                    <li>Phone: <a href="tel:+923023275555" style={{ color: '#0078D7' }}>+92 302 3275555</a></li>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/muhammadanusgul" target="_blank" rel="noopener noreferrer" style={{ color: '#0078D7' }}>muhammadanusgul</a></li>
-                    <li>GitHub: <a href="https://github.com/AnssGul" target="_blank" rel="noopener noreferrer" style={{ color: '#0078D7' }}>AnssGul</a></li>
-                    <li>WakaTime: <a href="https://wakatime.com/@Anusgul" target="_blank" rel="noopener noreferrer" style={{ color: '#0078D7' }}>Anusgul</a></li>
+                    <li><strong>Email:</strong> <a href="mailto:muhammadanss.0554@gmail.com" style={{ color: '#0078D7' }}>muhammadanss.0554@gmail.com</a></li>
+                    <li><strong>Phone:</strong> <a href="tel:+923023275555" style={{ color: '#0078D7' }}>+92 302 3275555</a></li>
+                    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/muhammadanusgul" target="_blank" rel="noopener noreferrer" style={{ color: '#0078D7' }}>muhammadanusgul</a></li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/AnssGul" target="_blank" rel="noopener noreferrer" style={{ color: '#0078D7' }}>AnssGul</a></li>
+                    <li><strong>WakaTime:</strong> <a href="https://wakatime.com/@Anusgul" target="_blank" rel="noopener noreferrer" style={{ color: '#0078D7' }}>Anusgul</a></li>
                 </ul>
             </section>
         </div>
@@ -225,3 +217,76 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
+
+
+
+// ...existing code...
+<div style={{ display: 'flex', flexDirection: 'row', width: '100%' }}>
+    {/* Left Section */}
+    <div style={{
+        flex: 1,
+        backgroundColor: '#F5F5F5',
+        color: '#000000',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        padding: '40px',
+        minWidth: '300px',
+    }}>
+        <h2 style={{ fontSize: '2em', fontWeight: 'bold', marginBottom: '20px' }}>Skills</h2>
+        <ul style={{ fontSize: '1.2em', lineHeight: '1.8', marginBottom: '40px' }}>
+            <li>Flutter</li>
+            <li>BLoC</li>
+            <li>GetX</li>
+            <li>Performance Optimization</li>
+        </ul>
+        <h2 style={{ fontSize: '2em', fontWeight: 'bold', marginBottom: '20px' }}>Contact</h2>
+        <p style={{ fontSize: '1.2em', lineHeight: '1.8', marginBottom: '40px' }}>
+            Email: example@example.com<br />
+            Phone: +1234567890
+        </p>
+        <h2 style={{ fontSize: '2em', fontWeight: 'bold', marginBottom: '20px' }}>Live Projects</h2>
+        <ul style={{ fontSize: '1.2em', lineHeight: '1.8', marginBottom: '40px' }}>
+            <li><a href="https://project1.com" target="_blank" rel="noopener noreferrer">Project 1</a></li>
+            <li><a href="https://project2.com" target="_blank" rel="noopener noreferrer">Project 2</a></li>
+            <li><a href="https://project3.com" target="_blank" rel="noopener noreferrer">Project 3</a></li>
+        </ul>
+    </div>
+
+    {/* Right Section */}
+    <div style={{
+        flex: 2,
+        backgroundColor: '#1A1A1A',
+        color: '#FFFFFF',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        padding: '40px',
+        minWidth: '300px',
+    }}>
+        <h1 style={{ fontSize: '2.5em', fontWeight: 'bold', marginBottom: '20px' }}>
+            Hi, I'm Muhammad Anus Gul
+        </h1>
+        <p style={{ fontSize: '1.2em', lineHeight: '1.8', marginBottom: '40px' }}>
+            A seasoned <strong>Flutter Developer</strong> with expertise in crafting scalable, user-friendly mobile applications. Proficient in <strong>BLoC</strong>, <strong>GetX</strong>, and performance optimization.
+        </p>
+        <a
+            href="/Anus_Gul_CV.pdf"
+            download="Anus_Gul_CV.pdf"
+            style={{
+                display: 'inline-block',
+                padding: '15px 30px',
+                backgroundColor: '#FF5722',
+                color: '#FFFFFF',
+                textDecoration: 'none',
+                borderRadius: '5px',
+            }}
+        >
+            Download CV
+        </a>
+    </div>
+</div>
+// ...existing code...
