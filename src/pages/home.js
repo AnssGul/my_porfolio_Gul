@@ -99,7 +99,7 @@ const Home = () => {
                 <ul style={{
                     textAlign: 'left',
                     margin: '0 auto',
-                    maxWidth: '700px',
+                    maxWidth: '100%',
                     listStyleType: 'square',
                     alignItems: "start",
                     fontSize: '1.1em',
@@ -136,7 +136,7 @@ const Home = () => {
                 <ul style={{
                     textAlign: 'left',
                     margin: '0 auto',
-                    maxWidth: '700px',
+                    maxWidth: '100%',
                     lineHeight: '1.8',
                     fontSize: '1.1em',
                 }}>
@@ -202,7 +202,7 @@ const Home = () => {
                     padding: 0,
                     textAlign: 'left',
                     margin: '0 auto',
-                    maxWidth: '600px',
+                    maxWidth: '100%',
                     fontSize: '1.1em',
                 }}>
                     <li><strong>Email:</strong> <a href="mailto:muhammadanss.0554@gmail.com" style={{ color: '#0078D7' }}>muhammadanss.0554@gmail.com</a></li>
