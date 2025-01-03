@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import Home from './pages/home';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import bio from './pages/bio';
+import Home from './pages/home/home';
 function App() {
   return (
     <div>
