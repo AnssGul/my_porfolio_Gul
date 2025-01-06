@@ -1,4 +1,4 @@
-export function Profile() {
+export function Profile({ isDarkMode }) {
     return (
         <img
             src="/profile.jpg"
@@ -8,7 +8,10 @@ export function Profile() {
                 height: '202px',
                 borderRadius: '50%',
                 marginBottom: '20px',
-                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+                boxShadow: isDarkMode
+                    ? '0 4px 8px rgba(255, 255, 255, 0.2)'
+                    : '0 4px 8px rgba(0, 0, 0, 0.2)',
+                border: isDarkMode ? '4px solid #ffffff' : 'none',
             }}
         />
     );

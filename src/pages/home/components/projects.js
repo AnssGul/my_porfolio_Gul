@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-const Projects = () => {
+const Projects = ({ isDarkMode }) => {
     const projectData = [
         {
             title: 'Wineish',
@@ -51,16 +51,18 @@ const Projects = () => {
     return (
         <section style={{
             padding: '20px',
-            backgroundColor: '#F1F8E9',
+            backgroundColor: isDarkMode ? '#1E1E1E' : '#F1F8E9',
             borderRadius: '8px',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            boxShadow: isDarkMode
+                ? '0 4px 8px rgba(255, 255, 255, 0.1)'
+                : '0 4px 8px rgba(0, 0, 0, 0.1)',
             width: '100%',
         }}>
             <h2 style={{
                 fontSize: '1.8em',
                 marginBottom: '20px',
-                color: '#004d40',
-                borderBottom: '2px solid #00796B',
+                color: isDarkMode ? '#E0E0E0' : '#004d40',
+                borderBottom: `2px solid ${isDarkMode ? '#E0E0E0' : '#00796B'}`,
                 display: 'inline-block',
                 paddingBottom: '5px',
             }}>
@@ -74,7 +76,7 @@ const Projects = () => {
             }}>
                 {projectData.map((project, index) => (
                     <div key={index} style={{
-                        backgroundColor: '#FFFFFF',
+                        backgroundColor: isDarkMode ? '#1E1E1E' : '#F1F8E9',
                         borderRadius: '8px',
                         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
                         padding: '15px',
@@ -90,17 +92,17 @@ const Projects = () => {
                             borderRadius: '8px',
                             marginBottom: '10px',
                         }} />
-                        <h3 style={{ fontSize: '1.3em', color: '#004d40' }}>{project.title}</h3>
-                        <p style={{ fontSize: '0.9em', color: '#777', margin: '10px 0' }}>
+                        <h3 style={{ fontSize: '1.3em', color: isDarkMode ? '#E0E0E0' : '#004d40', }}>{project.title}</h3>
+                        <p style={{ fontSize: '0.9em', color: isDarkMode ? '#B0B0B0' : '#777', margin: '10px 0' }}>
                             <strong>Tech Stack:</strong> {project.tech}
                         </p>
-                        <p style={{ fontSize: '0.9em', color: '#555', marginBottom: '15px' }}>
+                        <p style={{ fontSize: '0.9em', color: isDarkMode ? '#B0B0B0' : '#555', marginBottom: '15px' }}>
                             {project.description}
                         </p>
                         <a href={project.link} target="_blank" rel="noopener noreferrer" style={{
                             fontSize: '0.9em',
-                            color: '#FFFFFF',
-                            backgroundColor: '#004d40',
+                            color: isDarkMode ? '#1E1E1E' : '#F1F8E9',
+                            backgroundColor: isDarkMode ? '#E0E0E0' : '#004d40',
                             textDecoration: 'none',
                             fontWeight: 'bold',
                             padding: '10px 15px',
@@ -118,7 +120,13 @@ const Projects = () => {
 
 export default Projects;
 
-// const Projects = () => {
+
+
+// import React, { useState, useEffect } from 'react';
+
+// const Projects = ({ isDarkMode }) => {
+//     const [isVisible, setIsVisible] = useState(false);
+
 //     const projectData = [
 //         {
 //             title: 'Wineish',
@@ -137,7 +145,7 @@ export default Projects;
 //         {
 //             title: 'Read Maududi',
 //             tech: 'Flutter (Bloc)',
-//             description: 'Developed an app offering access to content related to Maulana Maududi, allowing users to read, listen to audio, and watch videos, providing a comprehensive platform for exploring his work. Stay connected to your faith with reminders and spiritual insights.',
+//             description: 'Developed an app offering access to content related to Maulana Maududi, allowing users to read, listen to audio, and watch videos.',
 //             link: 'https://apps.apple.com/us/app/read-maududi/id6711342459',
 //             thumbnail: '/read_maududi.svg'
 //         },
@@ -151,7 +159,7 @@ export default Projects;
 //         {
 //             title: 'Side of the Road',
 //             tech: 'Flutter (GETx)',
-//             description: 'Side of the Road is your neighborhood\'s digital hub. Discover free stuff, explore local businesses and vendors, and find upcoming events. Join our vibrant community and participate in monthly contests for a chance to win exciting prizes, just by signing up.',
+//             description: 'Side of the Road is your neighborhood\'s digital hub. Discover free stuff, explore local businesses and vendors, and find upcoming events.',
 //             link: 'https://play.google.com/store/apps/details?id=com.sideoftheroads.android',
 //             thumbnail: '/sotr.svg'
 //         },
@@ -164,45 +172,57 @@ export default Projects;
 //         },
 //     ];
 
+//     useEffect(() => {
+//         const timer = setTimeout(() => {
+//             setIsVisible(true);
+//         }, 500);
+
+//         return () => clearTimeout(timer); // Clean up the timer
+//     }, []);
+
 //     return (
 //         <section style={{
 //             padding: '20px',
-//             backgroundColor: '#F1F8E9',
+//             backgroundColor: isDarkMode ? '#1E1E1E' : '#F1F8E9',
 //             borderRadius: '8px',
-//             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+//             boxShadow: isDarkMode
+//                 ? '0 4px 8px rgba(255, 255, 255, 0.1)'
+//                 : '0 4px 8px rgba(0, 0, 0, 0.1)',
 //             width: '100%',
 //         }}>
 //             <h2 style={{
 //                 fontSize: '1.8em',
 //                 marginBottom: '20px',
-//                 color: '#004d40',
-//                 borderBottom: '2px solid #00796B',
+//                 color: isDarkMode ? '#E0E0E0' : '#004d40',
+//                 borderBottom: `2px solid ${isDarkMode ? '#E0E0E0' : '#00796B'}`,
 //                 display: 'inline-block',
 //                 paddingBottom: '5px',
 //             }}>
 //                 Live Projects
 //             </h2>
 //             <div style={{
-//                 display: 'flex',
-//                 overflowX: 'auto',
+//                 display: 'grid',
+//                 gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
 //                 gap: '15px',
 //                 padding: '10px 0',
-//                 scrollbarWidth: 'thin',
-//                 scrollBehavior: 'smooth',
-//                 flexWrap: 'nowrap',
 //             }}>
 //                 {projectData.map((project, index) => (
-//                     <div key={index} style={{
-//                         minWidth: '250px',
-//                         backgroundColor: '#FFFFFF',
-//                         borderRadius: '8px',
-//                         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-//                         padding: '15px',
-//                         textAlign: 'left',
-//                         display: 'flex',
-//                         flexDirection: 'column',
-//                         justifyContent: 'space-between',
-//                     }}>
+//                     <div
+//                         key={index}
+//                         style={{
+//                             backgroundColor: isDarkMode ? '#1E1E1E' : '#F1F8E9',
+//                             borderRadius: '8px',
+//                             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+//                             padding: '15px',
+//                             textAlign: 'left',
+//                             display: 'flex',
+//                             flexDirection: 'column',
+//                             justifyContent: 'space-between',
+//                             opacity: isVisible ? 1 : 0, // Apply fade-in effect
+//                             transform: isVisible ? 'translateY(0)' : 'translateY(10px)', // Slide up animation
+//                             transition: `all 0.5s ease ${index * 0.1}s`, // Staggered delay
+//                         }}
+//                     >
 //                         <img src={project.thumbnail} alt={project.title} style={{
 //                             width: '100px',
 //                             height: '100px',
@@ -210,124 +230,17 @@ export default Projects;
 //                             borderRadius: '8px',
 //                             marginBottom: '10px',
 //                         }} />
-//                         <h3 style={{ fontSize: '1.3em', color: '#004d40' }}>{project.title}</h3>
-//                         <p style={{ fontSize: '0.9em', color: '#777', margin: '10px 0' }}>
+//                         <h3 style={{ fontSize: '1.3em', color: isDarkMode ? '#E0E0E0' : '#004d40', }}>{project.title}</h3>
+//                         <p style={{ fontSize: '0.9em', color: isDarkMode ? '#B0B0B0' : '#777', margin: '10px 0' }}>
 //                             <strong>Tech Stack:</strong> {project.tech}
 //                         </p>
-//                         <p style={{ fontSize: '0.9em', color: '#555', marginBottom: '15px' }}>
+//                         <p style={{ fontSize: '0.9em', color: isDarkMode ? '#B0B0B0' : '#555', marginBottom: '15px' }}>
 //                             {project.description}
 //                         </p>
 //                         <a href={project.link} target="_blank" rel="noopener noreferrer" style={{
 //                             fontSize: '0.9em',
-//                             color: '#FFFFFF',
-//                             backgroundColor: '#004d40',
-//                             textDecoration: 'none',
-//                             fontWeight: 'bold',
-//                             padding: '10px 15px',
-//                             borderRadius: '5px',
-//                             textAlign: 'center',
-//                         }}>
-//                             Visit Project
-//                         </a>
-//                     </div>
-//                 ))}
-//             </div>
-//         </section>
-//     );
-// };
-
-// export default Projects;
-
-// const Projects = () => {
-//     const projectData = [
-//         {
-//             title: 'Wineish',
-//             tech: 'Flutter (Bloc)',
-//             description: 'Developed an app offering job listings, event details, wine pairing suggestions, and chat features for users.',
-//             link: 'https://play.google.com/store/apps/details?id=com.wineish.app&pcampaignid=web_share',
-//         },
-//         {
-//             title: 'Quraan e Mubeen',
-//             tech: 'Flutter (Bloc)',
-//             description: 'Discover Quran recitations, prayer times, daily duas, and Hadith collections in our Islamic app.',
-//             link: 'https://play.google.com/store/apps/details?id=com.quraanemubeen.app&pcampaignid=web_share',
-//         },
-//         {
-//             title: 'Read Maududi',
-//             tech: 'Flutter (Bloc)',
-//             description: 'Developed an app offering access to content related to Maulana Maududi, allowing users to read, listen to audio, and watch videos, providing a comprehensive platform for exploring his work. Stay connected to your faith with reminders and spiritual insights.',
-//             link: 'https://apps.apple.com/us/app/read-maududi/id6711342459',
-//         },
-//         {
-//             title: 'IPassenger',
-//             tech: 'Flutter (GETx)',
-//             description: 'A ride-sharing app providing seamless, secure, and reliable transportation services with user-friendly features.',
-//             link: 'https://play.google.com/store/apps/details?id=com.ustf.ipassengerapp',
-//         },
-//         {
-//             title: 'Side of the Road',
-//             tech: 'Flutter (GETx)',
-//             description: 'Side of the Road is your neighborhood\'s digital hub. Discover free stuff, explore local businesses and vendors, and find upcoming events. Join our vibrant community and participate in monthly contests for a chance to win exciting prizes, just by signing up.',
-//             link: 'https://play.google.com/store/apps/details?id=com.sideoftheroads.android',
-//         },
-//         {
-//             title: 'Nairobi Professional',
-//             tech: 'Flutter (GETx)',
-//             description: 'Nairobi Professional connects stylists, brands & YOU!',
-//             link: 'https://play.google.com/store/apps/details?id=com.nairobi.professional&pcampaignid=web_share',
-//         },
-//     ];
-
-//     return (
-//         <section style={{
-//             padding: '20px',
-//             backgroundColor: '#F1F8E9',
-//             borderRadius: '8px',
-//             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-//             width: '100%',
-//         }}>
-//             <h2 style={{
-//                 fontSize: '1.8em',
-//                 marginBottom: '20px',
-//                 color: '#004d40',
-//                 borderBottom: '2px solid #00796B',
-//                 display: 'inline-block',
-//                 paddingBottom: '5px',
-//             }}>
-//                 Live Projects
-//             </h2>
-//             <div style={{
-//                 display: 'flex',
-//                 overflowX: 'auto',
-//                 gap: '15px',
-//                 padding: '10px 0',
-//                 scrollbarWidth: 'thin',
-//                 scrollBehavior: 'smooth',
-//                 flexWrap: 'nowrap', // Prevent wrapping
-//             }}>
-//                 {projectData.map((project, index) => (
-//                     <div key={index} style={{
-//                         minWidth: '250px',
-//                         backgroundColor: '#FFFFFF',
-//                         borderRadius: '8px',
-//                         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-//                         padding: '15px',
-//                         textAlign: 'left',
-//                         display: 'flex',
-//                         flexDirection: 'column',
-//                         justifyContent: 'space-between',
-//                     }}>
-//                         <h3 style={{ fontSize: '1.3em', color: '#004d40' }}>{project.title}</h3>
-//                         <p style={{ fontSize: '0.9em', color: '#777', margin: '10px 0' }}>
-//                             <strong>Tech Stack:</strong> {project.tech}
-//                         </p>
-//                         <p style={{ fontSize: '0.9em', color: '#555', marginBottom: '15px' }}>
-//                             {project.description}
-//                         </p>
-//                         <a href={project.link} target="_blank" rel="noopener noreferrer" style={{
-//                             fontSize: '0.9em',
-//                             color: '#FFFFFF',
-//                             backgroundColor: '#004d40',
+//                             color: isDarkMode ? '#1E1E1E' : '#F1F8E9',
+//                             backgroundColor: isDarkMode ? '#E0E0E0' : '#004d40',
 //                             textDecoration: 'none',
 //                             fontWeight: 'bold',
 //                             padding: '10px 15px',
@@ -346,40 +259,6 @@ export default Projects;
 // export default Projects;
 
 
-// const Projects = () => (
-//     <section style={{
-//         margin: '20px 0',
-//         backgroundColor: '#F1F8E9',
-//         padding: '20px',
-//         borderRadius: '8px',
-//         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-//         width: '100%',
-//     }}>
-//         <h2 style={{
-//             fontSize: '1.8em',
-//             marginBottom: '20px',
-//             color: '#004d40',
-//             borderBottom: '2px solid #00796B',
-//             display: 'inline-block',
-//             paddingBottom: '5px',
-//         }}>
-//             Live Projects
-//         </h2>
-//         <ul style={{
-//             textAlign: 'left',
-//             margin: '0 auto',
-//             maxWidth: '100%',
-//             lineHeight: '1.8',
-//             fontSize: '1.1em',
-//         }}>
-//             <li><strong>Wineish App</strong> - <a href="https://play.google.com/store/apps/details?id=com.wineish.app&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" style={{ color: '#004d40' }}>Google Play Store</a></li>
-//             <li><strong>Read Maududi</strong> - <a href="https://apps.apple.com/us/app/read-maududi/id6711342459" target="_blank" rel="noopener noreferrer" style={{ color: '#004d40' }}>Apple App Store</a></li>
-//             <li><strong>Quraan e Mubeen App</strong> - <a href="https://play.google.com/store/apps/details?id=com.quraanemubeen.app&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" style={{ color: '#004d40' }}>Google Play Store</a></li>
-//             <li><strong>iPassenger App</strong> - <a href="https://play.google.com/store/apps/details?id=com.ustf.ipassengerapp" target="_blank" rel="noopener noreferrer" style={{ color: '#004d40' }}>Google Play Store</a></li>
-//             <li><strong>Side of the Roads</strong> - <a href="https://play.google.com/store/apps/details?id=com.sideoftheroads.android" target="_blank" rel="noopener noreferrer" style={{ color: '#004d40' }}>Google Play Store</a></li>
-//         </ul>
-//     </section>
-// );
 
-// export default Projects;
+
 
