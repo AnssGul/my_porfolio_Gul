@@ -2,7 +2,7 @@ import React from "react";
 const PdfDownload = ({ isDarkMode }) => (
 
     <a
-        href="/Anus_Gul_CV.pdf"
+        href="/pdf/Anus_Gul_CV.pdf"
         download="Anus_Gul_CV.pdf"
         style={{
             display: 'inline-block',

@@ -9,7 +9,7 @@ const Contact = ({ isDarkMode }) => (
         margin: '20px 0',
         boxShadow: '0 6px 12px rgba(0, 0, 0, 0.15)',
         width: '100%',
-        maxWidth: '600px',
+
         marginLeft: 'auto',
         marginRight: 'auto',
     }}>

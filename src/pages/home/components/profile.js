@@ -1,7 +1,7 @@
 export function Profile({ isDarkMode }) {
     return (
         <img
-            src="/profile.jpg"
+            src="/images/profile.jpg"
             alt="Muhammad Anus Gul"
             style={{
                 width: '202px',

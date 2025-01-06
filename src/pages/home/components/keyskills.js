@@ -65,9 +65,9 @@ const Skills = ({ isDarkMode }) => {
     );
 };
 const animateItemStyle = {
-    opacity: 0, // Start hidden
-    transform: 'translateY(10px)', // Slightly down
-    animationDelay: '0.2s', // Add delay for staggered animation
+    opacity: 0,
+    transform: 'translateY(10px)',
+    animationDelay: '0.2s',
 };
 export default Skills;
 
