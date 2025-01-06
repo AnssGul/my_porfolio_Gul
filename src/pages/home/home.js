@@ -76,7 +76,7 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
                 style={{
                     width: '100%',
                     display: 'flex',
-                    justifyContent: 'space-between',
+                    justifyContent: 'right',
                     alignItems: 'center',
                     padding: '10px 20px',
                     backgroundColor: isDarkMode ? '#1E1E1E' : '#004d40',
@@ -84,7 +84,7 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
                     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
                 }}
             >
-                <h1 style={{ fontSize: '1.5em', fontWeight: 'bold' }}>My Portfolio</h1>
+
                 <button
                     onClick={toggleDarkMode}
                     style={{
@@ -99,10 +99,10 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
                         fontWeight: 'bold',
                         transition: 'transform 0.3s ease',
                     }}
-                    aria-label="Toggle Dark Mode"
+
                 >
                     {isDarkMode ? <FiSun /> : <FiMoon />}
-                    <span>{isDarkMode ? 'Light Theme' : 'Dark Theme'}</span>
+
                 </button>
             </header>
 

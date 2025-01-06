@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 
 
 
 const Projects = ({ isDarkMode }) => {
+    const [isVisible, setIsVisible] = useState(false);
     const projectData = [
         {
             title: 'Wineish',
@@ -47,7 +49,13 @@ const Projects = ({ isDarkMode }) => {
             thumbnail: '/nairobi.svg'
         },
     ];
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsVisible(true);
+        }, 500);
 
+        return () => clearTimeout(timer); // Clean up the timer
+    }, []);
     return (
         <section style={{
             padding: '20px',
@@ -84,6 +92,9 @@ const Projects = ({ isDarkMode }) => {
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'space-between',
+                        opacity: isVisible ? 1 : 0, // Apply fade-in effect
+                        transform: isVisible ? 'translateY(0)' : 'translateY(10px)', // Slide up animation
+                        transition: `all 0.5s ease ${index * 0.1}s`, // Staggered delay
                     }}>
                         <img src={project.thumbnail} alt={project.title} style={{
                             width: '100px',
