@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'; // Removed unused 'Router'
 import Home from './pages/home/home'; // Ensure the correct path is used for Home
-// import Bio from './pages/bio'; // Uncomment this if you're using the Bio component
+import Bio from './pages/bio'; // Uncomment this if you're using the Bio component
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -28,7 +28,7 @@ function App() {
             element={<Home isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />}
           />
           {/* Uncomment the line below if the Bio component is available */}
-          {/* <Route path="/bio" element={<Bio isDarkMode={isDarkMode} />} /> */}
+          <Route path="/bio" element={<Bio isDarkMode={isDarkMode} />} />
         </Routes>
       </BrowserRouter>
     </div>

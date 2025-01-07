@@ -9,7 +9,7 @@ const PdfDownload = ({ isDarkMode }) => (
             padding: '15px 30px',
             backgroundColor: isDarkMode ? '#FFFFFF' : '#004d40',
 
-            color: '#1E1E1E',
+            color: isDarkMode ? '#1E1E1E' : '#FFFFFF',
             textDecoration: 'none',
             borderRadius: '5px',
             fontSize: '1.2em',

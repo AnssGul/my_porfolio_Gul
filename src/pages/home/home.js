@@ -17,7 +17,9 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
     const sidebarRef = useRef(null);
     const profileRef = useRef(null);
     const contentRef = useRef(null);
-
+    const handleNavigateToBio = () => {
+        navigate('/bio'); // Navigate to the bio route
+    };
 
     useEffect(() => {
         const sidebarElement = sidebarRef.current;
@@ -42,8 +44,10 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
                 pos += direction;
                 profileElement.style.transform = `translateY(${pos}px)`;
                 requestAnimationFrame(bounce);
+
             };
             requestAnimationFrame(bounce);
+
         }
 
         if (contentElement) {
