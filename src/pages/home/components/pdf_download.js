@@ -7,7 +7,7 @@ const PdfDownload = ({ isDarkMode }) => (
         style={{
             display: 'inline-block',
             padding: '15px 30px',
-            backgroundColor: isDarkMode ? '#FFFFFF' : '#004d40',
+            backgroundColor: isDarkMode ? '#FFFFFF' : '#160EACFF',
 
             color: isDarkMode ? '#1E1E1E' : '#FFFFFF',
             textDecoration: 'none',

@@ -3,7 +3,7 @@ import { FaEnvelope, FaPhoneAlt, FaLinkedin, FaGithub, FaClock } from "react-ico
 
 const Contact = ({ isDarkMode }) => (
     <section style={{
-        backgroundColor: isDarkMode ? '#1E1E1E' : '#E8F5E9',
+        backgroundColor: isDarkMode ? "#1E1E1E" : "#3B2CACFF",
         padding: '30px',
         borderRadius: '10px',
         margin: '20px 0',
@@ -16,9 +16,9 @@ const Contact = ({ isDarkMode }) => (
         <h2 style={{
             fontSize: '2em',
             marginBottom: '25px',
-            color: isDarkMode ? '#E0E0E0' : '#1B5E20',
+            color: isDarkMode ? '#E0E0E0' : '#FFFFFFFF',
             textAlign: 'center',
-            borderBottom: `2px solid ${isDarkMode ? '#E0E0E0' : '#00796B'}`,
+            borderBottom: `2px solid ${isDarkMode ? '#E0E0E0' : '#160EACFF'}`,
             display: 'inline-block',
             paddingBottom: '8px',
         }}>
@@ -35,10 +35,10 @@ const Contact = ({ isDarkMode }) => (
                 alignItems: 'center',
                 marginBottom: '15px',
             }}>
-                <FaEnvelope style={{ color: isDarkMode ? '#E0E0E0' : '#1B5E20', marginRight: '10px' }} />
+                <FaEnvelope style={{ color: isDarkMode ? '#E0E0E0' : '#FFFFFFFF', marginRight: '10px' }} />
                 <strong>Email:</strong>
                 <a href="mailto:muhammadanss.0554@gmail.com" style={{
-                    color: isDarkMode ? '#E0E0E0' : '#2E7D32',
+                    color: isDarkMode ? '#E0E0E0' : '#FFFFFFFF',
                     textDecoration: 'none',
                     marginLeft: '5px',
                 }}>muhammadanss.0554@gmail.com</a>
@@ -48,10 +48,10 @@ const Contact = ({ isDarkMode }) => (
                 alignItems: 'center',
                 marginBottom: '15px',
             }}>
-                <FaPhoneAlt style={{ color: isDarkMode ? '#E0E0E0' : '#1B5E20', marginRight: '10px' }} />
+                <FaPhoneAlt style={{ color: isDarkMode ? '#E0E0E0' : '#FFFFFFFF', marginRight: '10px' }} />
                 <strong>Phone:</strong>
                 <a href="tel:+923023275555" style={{
-                    color: isDarkMode ? '#E0E0E0' : '#2E7D32',
+                    color: isDarkMode ? '#E0E0E0' : '#FFFFFFFF',
                     textDecoration: 'none',
                     marginLeft: '5px',
                 }}>+92 302 3275555</a>
@@ -61,10 +61,10 @@ const Contact = ({ isDarkMode }) => (
                 alignItems: 'center',
                 marginBottom: '15px',
             }}>
-                <FaLinkedin style={{ color: isDarkMode ? '#E0E0E0' : '#1B5E20', marginRight: '10px' }} />
+                <FaLinkedin style={{ color: isDarkMode ? '#E0E0E0' : '#FFFFFFFF', marginRight: '10px' }} />
                 <strong>LinkedIn:</strong>
                 <a href="https://www.linkedin.com/in/muhammadanusgull/" target="_blank" rel="noopener noreferrer" style={{
-                    color: isDarkMode ? '#E0E0E0' : '#2E7D32',
+                    color: isDarkMode ? '#E0E0E0' : '#FFFFFFFF',
                     textDecoration: 'none',
                     marginLeft: '5px',
                 }}>muhammadanusgul</a>
@@ -74,10 +74,10 @@ const Contact = ({ isDarkMode }) => (
                 alignItems: 'center',
                 marginBottom: '15px',
             }}>
-                <FaGithub style={{ color: isDarkMode ? '#E0E0E0' : '#1B5E20', marginRight: '10px' }} />
+                <FaGithub style={{ color: isDarkMode ? '#E0E0E0' : '#FFFFFFFF', marginRight: '10px' }} />
                 <strong>GitHub:</strong>
                 <a href="https://github.com/AnssGul" target="_blank" rel="noopener noreferrer" style={{
-                    color: isDarkMode ? '#E0E0E0' : '#2E7D32',
+                    color: isDarkMode ? '#E0E0E0' : '#FFFFFFFF',
                     textDecoration: 'none',
                     marginLeft: '5px',
                 }}>AnssGul</a>
@@ -87,10 +87,10 @@ const Contact = ({ isDarkMode }) => (
                 alignItems: 'center',
                 marginBottom: '15px',
             }}>
-                <FaClock style={{ color: isDarkMode ? '#E0E0E0' : '#1B5E20', marginRight: '10px' }} />
+                <FaClock style={{ color: isDarkMode ? '#E0E0E0' : '#FFFFFFFF', marginRight: '10px' }} />
                 <strong>WakaTime:</strong>
                 <a href="https://wakatime.com/@Anusgul" target="_blank" rel="noopener noreferrer" style={{
-                    color: isDarkMode ? '#E0E0E0' : '#2E7D32',
+                    color: isDarkMode ? '#E0E0E0' : '#E0E0E0',
                     textDecoration: 'none',
                     marginLeft: '5px',
                 }}>Anusgul</a>

@@ -83,7 +83,7 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
                     justifyContent: 'right',
                     alignItems: 'center',
                     padding: '10px 20px',
-                    backgroundColor: isDarkMode ? '#1E1E1E' : '#004d40',
+                    backgroundColor: isDarkMode ? '#1E1E1E' : '#160EACFF',
                     color: '#FFFFFF',
                     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
                 }}
@@ -115,7 +115,7 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
                 ref={sidebarRef}
                 style={{
                     flex: 1,
-                    backgroundColor: isDarkMode ? '#1E1E1E' : '#004d40',
+                    backgroundColor: isDarkMode ? '#1E1E1E' : '#160EACFF',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
@@ -139,7 +139,7 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
                 ref={contentRef}
                 style={{
                     flex: 2,
-                    backgroundColor: isDarkMode ? '#1E1E1E' : '#263238',
+                    backgroundColor: isDarkMode ? '#1E1E1E' : '#3B2CACFF',
                     color: '#FFFFFF',
                     display: 'flex',
                     flexDirection: 'column',

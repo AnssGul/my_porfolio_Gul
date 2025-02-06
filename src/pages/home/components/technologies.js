@@ -4,6 +4,7 @@ import { SiFlutter, SiDart, SiFirebase, SiRedux, SiCanva } from 'react-icons/si'
 import { IoLogoApple } from 'react-icons/io5';
 
 
+
 const Technologies = ({ isDarkMode }) => {
     const [isVisible, setIsVisible] = useState(false);
 
@@ -19,46 +20,46 @@ const Technologies = ({ isDarkMode }) => {
     return (
         <section
             style={{
-                backgroundColor: isDarkMode ? '#1E1E1E' : '#F1F8E9',
-                color: isDarkMode ? '#FFFFFF' : '#004d40',
-                padding: '20px',
-                borderRadius: '8px',
-                margin: '20px 0',
+                backgroundColor: isDarkMode ? "#1E1E1E" : "#3B2CACFF", // Blue background
+                color: isDarkMode ? "#FFFFFF" : "#160EACFF",
+                padding: "20px",
+                borderRadius: "8px",
+                margin: "20px 0",
                 boxShadow: isDarkMode
-                    ? '0 4px 8px rgba(255, 255, 255, 0.1)'
-                    : '0 4px 8px rgba(0, 0, 0, 0.1)',
-                width: '100%',
-                transition: 'all 0.3s ease',
+                    ? "0 4px 8px rgba(255, 255, 255, 0.1)"
+                    : "0 4px 8px rgba(0, 0, 0, 0.1)",
+                width: "100%",
+                transition: "all 1s ease-out",
                 opacity: isVisible ? 1 : 0, // Start with opacity 0 and fade in
-                transform: isVisible ? 'translateY(0)' : 'translateY(20px)', // Slide in effect
-                transition: 'all 1s ease-out', // Smooth animation transition
+                transform: isVisible ? "translateY(0)" : "translateY(20px)", // Slide in effect
             }}
         >
             <h2
                 style={{
-                    fontSize: '1.8em',
-                    marginBottom: '20px',
-                    color: isDarkMode ? '#E0E0E0' : '#1B5E20',
-                    borderBottom: `2px solid ${isDarkMode ? '#E0E0E0' : '#1B5E20'}`,
-                    display: 'inline-block',
-                    paddingBottom: '5px',
+                    fontSize: "1.8em",
+                    marginBottom: "20px",
+                    color: isDarkMode ? "#E0E0E0" : "#FFFFFFFF", // White text for better contrast
+                    borderBottom: `2px solid ${isDarkMode ? "#E0E0E0" : "#FFFFFFFF"}`,
+                    display: "inline-block",
+                    paddingBottom: "5px",
                 }}
             >
                 Technologies I Work With
             </h2>
             <ul
                 style={{
-                    textAlign: 'left',
-                    margin: '0 auto',
-                    maxWidth: '100%',
-                    listStyle: 'none',
-                    alignItems: 'start',
-                    fontSize: '1.1em',
-                    lineHeight: '1.8',
+                    textAlign: "left",
+                    margin: "0 auto",
+                    maxWidth: "100%",
+                    listStyle: "none",
+                    alignItems: "start",
+                    fontSize: "1.1em",
+                    lineHeight: "1.8",
                     padding: 0,
-                    display: 'grid', // Use grid for better layout
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', // Responsive layout
-                    gap: '20px', // Add space between items
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
+                    gap: "20px",
+                    color: "#FFFFFFFF"
                 }}
             >
                 <li style={animateItemStyle}>
@@ -105,7 +106,6 @@ const Technologies = ({ isDarkMode }) => {
                 </li>
             </ul>
 
-            {/* Add the keyframes animation globally or inline */}
             <style>
                 {`
                     @keyframes fadeInSlide {
@@ -119,7 +119,6 @@ const Technologies = ({ isDarkMode }) => {
                         }
                     }
 
-                    /* Apply animation to list items */
                     li {
                         animation: fadeInSlide 0.8s forwards;
                     }
@@ -129,11 +128,10 @@ const Technologies = ({ isDarkMode }) => {
     );
 };
 
-// Add animation style to each list item
 const animateItemStyle = {
-    opacity: 0, // Start hidden
-    transform: 'translateY(10px)', // Slightly down
-    animationDelay: '0.2s', // Add delay for staggered animation
+    opacity: 0,
+    transform: "translateY(10px)",
+    animationDelay: "0.2s",
 };
 
 export default Technologies;

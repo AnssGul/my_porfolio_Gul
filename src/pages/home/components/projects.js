@@ -59,7 +59,7 @@ const Projects = ({ isDarkMode }) => {
     return (
         <section style={{
             padding: '20px',
-            backgroundColor: isDarkMode ? '#1E1E1E' : '#F1F8E9',
+            backgroundColor: isDarkMode ? "#1E1E1E" : "#3B2CACFF",
             borderRadius: '8px',
             boxShadow: isDarkMode
                 ? '0 4px 8px rgba(255, 255, 255, 0.1)'
@@ -69,8 +69,8 @@ const Projects = ({ isDarkMode }) => {
             <h2 style={{
                 fontSize: '1.8em',
                 marginBottom: '20px',
-                color: isDarkMode ? '#E0E0E0' : '#004d40',
-                borderBottom: `2px solid ${isDarkMode ? '#E0E0E0' : '#00796B'}`,
+                color: isDarkMode ? '#E0E0E0' : '#FFFFFFFF',
+                borderBottom: `2px solid ${isDarkMode ? '#E0E0E0' : '#160EACFF'}`,
                 display: 'inline-block',
                 paddingBottom: '5px',
             }}>
@@ -84,7 +84,7 @@ const Projects = ({ isDarkMode }) => {
             }}>
                 {projectData.map((project, index) => (
                     <div key={index} style={{
-                        backgroundColor: isDarkMode ? '#1E1E1E' : '#F1F8E9',
+                        backgroundColor: isDarkMode ? "#1E1E1E" : "#483AB1FF",
                         borderRadius: '8px',
                         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
                         padding: '15px',
@@ -103,17 +103,17 @@ const Projects = ({ isDarkMode }) => {
                             borderRadius: '8px',
                             marginBottom: '10px',
                         }} />
-                        <h3 style={{ fontSize: '1.3em', color: isDarkMode ? '#E0E0E0' : '#004d40', }}>{project.title}</h3>
-                        <p style={{ fontSize: '0.9em', color: isDarkMode ? '#B0B0B0' : '#777', margin: '10px 0' }}>
+                        <h3 style={{ fontSize: '1.3em', color: isDarkMode ? '#E0E0E0' : '#FFFFFFFF', }}>{project.title}</h3>
+                        <p style={{ fontSize: '0.9em', color: isDarkMode ? '#B0B0B0' : '#FFFFFFFF', margin: '10px 0' }}>
                             <strong>Tech Stack:</strong> {project.tech}
                         </p>
-                        <p style={{ fontSize: '0.9em', color: isDarkMode ? '#B0B0B0' : '#555', marginBottom: '15px' }}>
+                        <p style={{ fontSize: '0.9em', color: isDarkMode ? '#B0B0B0' : '#FFFFFFFF', marginBottom: '15px' }}>
                             {project.description}
                         </p>
                         <a href={project.link} target="_blank" rel="noopener noreferrer" style={{
                             fontSize: '0.9em',
                             color: isDarkMode ? '#1E1E1E' : '#F1F8E9',
-                            backgroundColor: isDarkMode ? '#E0E0E0' : '#004d40',
+                            backgroundColor: isDarkMode ? '#E0E0E0' : '#160EACFF',
                             textDecoration: 'none',
                             fontWeight: 'bold',
                             padding: '10px 15px',

@@ -15,27 +15,27 @@ const Skills = ({ isDarkMode }) => {
 
         <section
             style={{
-                backgroundColor: isDarkMode ? '#1E1E1E' : '#F1F8E9',
-                color: isDarkMode ? '#FFFFFF' : '#004d40',
+                backgroundColor: isDarkMode ? "#1E1E1E" : "#3B2CACFF",
+                color: isDarkMode ? '#FFFFFF' : '#160EACFF',
                 padding: '20px',
                 borderRadius: '8px',
                 margin: '20px 0',
                 boxShadow: isDarkMode
                     ? '0 4px 8px rgba(255, 255, 255, 0.1)'
-                    : '0 4px 8px rgba(0, 0, 0, 0.1)',
+                    : '#5D59CBFF',
                 width: '100%',
                 opacity: isVisible ? 1 : 0, // Start with opacity 0 and fade in
                 transform: isVisible ? 'translateY(0)' : 'translateY(20px)', // Slide in effect
                 transition: 'all 1s ease-out', // Smooth animation transition
-                transition: 'all 0.3s ease',
+
             }}
         >
             <h2
                 style={{
                     fontSize: '1.8em',
                     marginBottom: '20px',
-                    color: isDarkMode ? '#E0E0E0' : '#1B5E20',
-                    borderBottom: `2px solid ${isDarkMode ? '#E0E0E0' : '#1B5E20'}`,
+                    color: isDarkMode ? '#E0E0E0' : '#FFFFFFFF',
+                    borderBottom: `2px solid ${isDarkMode ? '#E0E0E0' : '#160EACFF'}`,
                     display: 'inline-block',
                     paddingBottom: '5px',
                 }}
@@ -51,7 +51,7 @@ const Skills = ({ isDarkMode }) => {
                     alignItems: 'start',
                     fontSize: '1.1em',
                     lineHeight: '1.8',
-                    color: isDarkMode ? '#FFFFFF' : '#004d40',
+                    color: isDarkMode ? '#FFFFFF' : '#FFFFFFFF',
                 }}
             >
                 <li style={animateItemStyle}>Expert in <strong>Flutter</strong> with two years of hands-on experience and proficiency in <strong>BLoC</strong>, <strong>GetX</strong>, Provider, Riverpod, and Redux state management.</li>
@@ -68,6 +68,7 @@ const animateItemStyle = {
     opacity: 0,
     transform: 'translateY(10px)',
     animationDelay: '0.2s',
+
 };
 export default Skills;
 
